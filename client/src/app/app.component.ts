@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { IPagination } from './models/pagination';
+import { IProduct } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'Skinet';
-  products: any[];
+  products: IProduct[];
 
   /**
    *
@@ -20,7 +22,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('https://localhost:5001/api/products?pageSize=25').subscribe(
-      (resp: any) => {
+      (resp: IPagination) => {
         this.products = resp.data;
         console.log(resp);
       },
