@@ -6,8 +6,8 @@
   </a>
 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-uppercase" style="font-size: larger;">
-    <li><a [routerLink]="['/']" routerLinkActive="router-link-active" class="nav-link px-2 link-secondary">Home</a></li>
-    <li><a routerLink="/shop" class="nav-link px-2 link-dark">Shop</a></li>
+    <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link px-2 link-secondary">Home</a></li>
+    <li><a routerLink="/shop" routerLinkActive="active" class="nav-link px-2 link-dark">Shop</a></li>
     <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
   </ul>
 
